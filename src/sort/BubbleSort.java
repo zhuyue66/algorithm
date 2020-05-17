@@ -7,7 +7,7 @@ import java.util.Scanner;
  * 2018/12/2
  * @author zhuda
  */
-public class InsertSort {
+public class BubbleSort {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String s = scanner.next();

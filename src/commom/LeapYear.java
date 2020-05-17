@@ -1,3 +1,5 @@
+package commom;
+
 import java.util.Scanner;
 
 /**

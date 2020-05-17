@@ -1,4 +1,4 @@
-package leetcode.question21;
+package leetcode;
 
 /**
  * @Author: zhuda
@@ -67,5 +67,16 @@ public class Question21 {
             result = result.next;
         }
         System.out.println();
+    }
+
+    /**
+     * @Author: zhuda
+     * @Description:
+     * @Date: Create in 9:40 2019/4/2
+     */
+    public static class ListNode {
+        public int val;
+        ListNode next;
+        ListNode(int x) { val = x; }
     }
 }
