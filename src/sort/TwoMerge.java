@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @Author: zhuda
- * @Description:
+ * @Description: 二路归并排序
  * @Date: Create in 20:49 2020/5/17
  */
 public class TwoMerge {
@@ -29,7 +29,8 @@ public class TwoMerge {
 
     public static void merge(int[] a, int low, int mid, int high) {//两有序子表合并方法
 
-        int[] temp = new int[9];//这里把要排序数组copy一份，用来比较，原来的数组用来保存比较后的信息
+        //这里把要排序数组copy一份，用来比较，原来的数组用来保存比较后的信息
+        int[] temp = new int[a.length];
         for (int i = low; i <= high; i++) {//注意这里copy时，下标是从low开始的，要是为了保证copy的数组下标与目标数组下标一致，这样是为了方便后面的比较的下标操作
             temp[i] = a[i];//当然copy的数组保存时也可以从0开始保存，但是这样就要注意后面的比较操作时，i就不是小于mid了，而是小于mid-low，j也不是小于high，j是小于high-low
         }

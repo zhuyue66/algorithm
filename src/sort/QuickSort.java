@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @Author: zhuda
- * @Description:
+ * @Description: 快速排序
  * @Date: Create in 20:09 2020/5/17
  */
 public class QuickSort {
@@ -38,14 +38,17 @@ public class QuickSort {
      * @param right
      */
     public static void sort(int[] array, int left, int right) {
+
         if(left > right) {
             return;
         }
+
         // base中存放基准数(枢轴)
         int base = array[left];
         int i = left, j = right;
 
         while(i != j) {
+
             // 顺序很重要，先从右边开始往左找，直到找到比base值小的数
             while(array[j] >= base && i < j) {
                 j--;
@@ -61,7 +64,6 @@ public class QuickSort {
                 int tmp = array[i];
                 array[i] = array[j];
                 array[j] = tmp;
-                System.out.println(Arrays.toString(array));
             }
         }
 

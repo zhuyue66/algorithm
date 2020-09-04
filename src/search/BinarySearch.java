@@ -2,7 +2,7 @@ package search;
 
 /**
  * @Author: zhuda
- * @Description:
+ * @Description: 折半查找
  * @Date: Create in 15:29 2020/2/18
  */
 public class BinarySearch {
@@ -13,13 +13,13 @@ public class BinarySearch {
     }
 
 
-    public static int binarySearch(int[] input, int low, int high, int target) {
+    public static int binarySearch(int[] array, int low, int high, int target) {
         if (low <= high) {
             int middle = (low + high) / 2;
-            if (input[middle] > target) {
-                return binarySearch(input, low, middle - 1, target);
-            } else if (input[middle] < target) {
-                return binarySearch(input, middle + 1, high, target);
+            if (array[middle] > target) {
+                return binarySearch(array, low, middle - 1, target);
+            } else if (array[middle] < target) {
+                return binarySearch(array, middle + 1, high, target);
             } else{
                 return middle;
             }
